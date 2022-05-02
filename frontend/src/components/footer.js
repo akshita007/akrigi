@@ -72,19 +72,19 @@ const Footer = () => {
                   </Link>
               </li>
               <li>
-                <a href='#!' className='text-white linkstyle'>
+                <Link to="/termsandcondition"  style={{color:"white"}}>
                   Terms and Condition
-                </a>
+                </Link>
               </li>
               <li>
-                <a href='#!' className='text-white linkstyle'>
+              <Link to="/faqs"  style={{color:"white"}}>
                   FAQs
-                </a>
+                </Link>
               </li>
               <li>
-                <a href='#!' className='text-white linkstyle'>
+              <Link to="/returnpolicy"  style={{color:"white"}}>
                   Return Policy
-                </a>
+                </Link>
               </li>
               <li>
                 <Link to="/contactus" className="links"  style={{color:"white"}}>
@@ -94,23 +94,18 @@ const Footer = () => {
             </ul>
           </MDBCol>
           <MDBCol lg='3' md='12' className='mb-4 mb-md-0'>
-            <MDBRow >
-            <h5 className='text-uppercase linkstyle mb-2'>More way to shop</h5>
-              <a href="#" className="text-white mx-2">Rescues</a>
-              <a href="#" className="text-white mx-2" >Gift Card</a>
-             </MDBRow>
-            <MDBRow className="my-2">
-            <h5 className='text-uppercase linkstyle my-2'>sell on akrigi</h5>
-              <a href="#" className="text-white mx-2">Order a Clean kit</a>
-              <a href="#" className="text-white mx-2" >PayOut</a>
             
+            <MDBRow >
+            <h5 className='text-uppercase linkstyle'>sell on akrigi</h5>
+            <Link to="/sellform" className="links"  style={{color:"white"}}>
+                  Selling form
+                </Link>
             </MDBRow>
             <MDBRow className="my-2">
             <h5 className='text-uppercase linkstyle my-2'>Donate on akrigi</h5>
-              <a href="#" className="text-white mx-2">List of NGOs</a>
+              <Link to="/donate" className="links"  style={{color:"white"}}>Donate</Link>
               <Link to="/registerngo" className="links"  style={{color:"white"}}>Register NGO</Link>
-              <a href="#" className="text-white mx-2" >Authentication Certificate</a>
-            
+              <Link to="/listofNGOs" className="links"  style={{color:"white"}}>List of NGOs</Link>
             </MDBRow>
               
           </MDBCol>
