@@ -129,8 +129,8 @@ const DonationForm = ()=>{
                     </Row>
                     <div className="d-grid gap-2 mb-4" style={{margin:"10px"}}>
                         {localStorage.getItem("token")!==null?
-                        (<Button variant="primary" size="lg" onClick={()=>publishPost()}>Post</Button>)
-                    :(<Button variant="primary" size="lg" onClick={()=>{alert("Please Login first!")}}>Post</Button>)}    
+                        (<Button variant="primary" size="lg" onClick={()=>publishPost()}>Donate</Button>)
+                    :(<Button variant="primary" size="lg" onClick={()=>{alert("Please Login first!")}}>Donate</Button>)}    
                     </div>
                 </Container>
             </Form>
