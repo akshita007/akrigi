@@ -14,6 +14,13 @@ import Aboutus from "./pages/Aboutus";
 import Contactus from "./pages/Contactus";
 import DonationForm from "./pages/Donate";
 import NGORegisterationForm from "./pages/NGORegistrationForm";
+import Donate from "./pages/DonateCover";
+import MainContent from "./pages/MainContent";
+import TC from "./pages/TC";
+import Returnpolicy from "./pages/Returnpolicy";
+import FAQs from "./pages/FAQs"
+import ListofNGOs from './pages/ListofNGOs';
+
 
 function App() {
   useEffect(()=>{
@@ -30,6 +37,7 @@ function App() {
   },[])
   return (
   <Router>
+    <Routes><Route exact path="/" element = {<Animation/>}></Route></Routes>
     <Navbartask/>
       <Routes>
         <Route exact path="/" element = {<Animation/>}></Route>
@@ -41,6 +49,13 @@ function App() {
         <Route path="/sellForm" element = {<SellingForm/>}></Route>
         <Route path="/donateForm" element = {<DonationForm/>}></Route>
         <Route path="/registerngo" element = {<NGORegisterationForm/>}></Route>
+        <Route path="/donate" element = {<Donate/>}></Route>
+        <Route path="/termsandcondition" element = {<TC/>}></Route>
+        <Route path="/listofNGOs" element={<ListofNGOs/>}></Route>
+        <Route path="/returnpolicy" element={<Returnpolicy/>}></Route>
+        <Route path="/MainContent" element= {<MainContent/>}></Route>
+        <Route path="/faqs" element={<FAQs/>}></Route>
+       
       </Routes>
     <Footer/>
   </Router>

@@ -167,3 +167,106 @@ p{
   border: none;
 }
 
+.imgcontain{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  
+}
+.headingStyleLine{
+  width: 100%;
+  height: 20px; 
+  border-bottom: 2px solid #B5838D; 
+  text-align: center;  
+  margin-bottom: 20px;
+  padding: 0 40px;
+}
+.headingStyle{
+ padding: 0 10px;
+ background-color:#fff7f4;
+ color: #CE4257;
+ font-weight: bold;
+ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ 
+}
+
+.belowSliderInner{
+  padding: 8% 9% 6% 12%;
+  object-fit: contain;
+}
+.spacebet{
+ margin-top: 16%;
+}
+.curated{
+  width: 225.5px;
+  
+}
+
+.circle{
+  width: 200px;
+  height: 200px;
+  padding-top: 50px;
+  background-color: #b54e29;
+}
+
+.thrill{
+  background-color: #f7ded5;
+  color: #CE4257;
+}
+.thrillCol{
+  max-width: 300px;
+}
+.thrillIcon{
+  height: 60px;
+  
+}
+.donate{
+  background:  linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://designwebkit.com/wp-content/uploads/2018/02/charity-main.jpg');;
+  /* background-image: url(""); */
+  height: 534px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+.donateText {
+  padding-top: 170px;
+  color: rgb(241, 85, 34);
+  
+}
+.donateUpperheading{
+  font-size:50px;
+  -webkit-text-fill-color: rgb(241, 85, 34); 
+  -webkit-text-stroke-width: 0.6px;
+  -webkit-text-stroke-color: black;
+  
+}
+.bookButton{
+  box-shadow:rgb(0 0 0) 0px 0px 8px 1px;
+  background-color:rgb(241, 85, 34);
+}
+.product-style{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+}
+.p-des{
+  white-space: nowrap;
+        overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ngoicon{
+  margin-right: 10px;
+}
+.justifycontent{
+  text-align: justify;
+}
+.textreponsive{
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+@media (max-width:320px) {
+  .textreponsive{
+    width: 100%;
+    margin-left: 0px;
+  }
+}
