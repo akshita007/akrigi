@@ -1,6 +1,8 @@
 import React from 'react'
 import Slider from '../components/carousel'
-
+import { Container,Row,Col } from 'react-bootstrap'
+import Link from "react-router-dom"
+import {Button,Image} from "react-bootstrap"
 const Home = () => {
     return(
        <div>
