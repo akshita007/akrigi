@@ -20,7 +20,7 @@ import TC from "./pages/TC";
 import Returnpolicy from "./pages/Returnpolicy";
 import FAQs from "./pages/FAQs"
 import ListofNGOs from './pages/ListofNGOs';
-
+import SingleProd from "./pages/SingleProd";
 
 function App() {
   useEffect(()=>{
@@ -55,7 +55,7 @@ function App() {
         <Route path="/returnpolicy" element={<Returnpolicy/>}></Route>
         <Route path="/MainContent" element= {<MainContent/>}></Route>
         <Route path="/faqs" element={<FAQs/>}></Route>
-       
+       <Route path="/singleproduct" element={<SingleProd/>}></Route>
       </Routes>
     <Footer/>
   </Router>
