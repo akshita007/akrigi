@@ -8,7 +8,7 @@ const NGO = require('../models/NGO');
 router.use(bodyParser.json());
 
 //UPDATE ngo deatils like name,mob,site,email
-router.put("/:id",verify.verifyUser , async(req,res,next)=>{
+router.put("/:id",verify.verifyNGO , async(req,res,next)=>{
   if(req.body.password){
     req.body.password = CryptoJS.AES.encrypt(
       req.body.password,

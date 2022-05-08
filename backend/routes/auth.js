@@ -88,8 +88,8 @@ router.post("/login",(req,res,next)=>{
 
 //check jwt token
 
-router.get("/checkJwt",(req,res)=>{
-  passport.authenticate("jwt",{session:false},(err,user,info)=>{
+router.get("/checkJwt",(req,res,next)=>{
+  verify.jwtPassport.authenticate("UserJWT",{session:false},(err,user,info)=>{
     if(err) return next(err);
     if(!user){
       res.statusCode = 401;

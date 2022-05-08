@@ -12,7 +12,7 @@ passport.deserializeUser(User.deserializeUser());
 
 exports.getToken = (user)=>{
     return jwt.sign(user,process.env.JWT_SEC,{
-        expiresIn: 36000
+        expiresIn: '7d'
     });
 };
 
@@ -20,7 +20,7 @@ const opts = {};
 opts.jwtFromRequest = extractJwt.fromAuthHeaderAsBearerToken();
 opts.secretOrKey = process.env.JWT_SEC;
 
-exports.jwtPassport = passport.use(new JwtStatergy(opts,
+exports.jwtPassport = passport.use("UserJWT",new JwtStatergy(opts,
     (jwtPayload, done)=>{
         console.log(jwtPayload);
         User.findOne({_id:jwtPayload._id},(err,user)=>{
@@ -34,7 +34,7 @@ exports.jwtPassport = passport.use(new JwtStatergy(opts,
         });
     }));
 
-exports.verifyUser = passport.authenticate("jwt",{session: false});
+exports.verifyUser = passport.authenticate("UserJWT",{session: false});
 
 exports.verifyOrdinaryUser = function(req,res,next){
     var authHeaders = req.headers["authorization"];
@@ -65,7 +65,7 @@ exports.verifyOrdinaryUser = function(req,res,next){
 };
 
 exports.verifyAdmin = function(req,res,next){
-    if(req.user.admin){
+    if(req.user.isAdmin){
         next();
     }else{
         var err = new Error("You are not authorized to perform this operation");
