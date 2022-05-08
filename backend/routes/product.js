@@ -115,9 +115,7 @@ router.get("/", async (req,res)=>{
       products = await Product.find({}).populate("seller").sort({createdAt: -1}).limit(5);
     }else if(qCategory){
       products = await Product.find({
-        categories:{
-          $in:[qCategory],
-        },
+        category:qCategory,
       }).populate("seller");
     }else {
       products = await Product.find({}).populate("seller");
