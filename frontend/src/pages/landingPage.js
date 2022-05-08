@@ -16,7 +16,7 @@ const LandingPage = ()=>{
               <span className="boxText">Purchase</span>
             </div>
           </Link>
-          <Link to = "/donateForm" className = "links">
+          <Link to = "/donate" className = "links">
             <div className = "box">
               <img src="/images/boxImageDonate.jpg" alt = "Donate" className = "boxImage"/>
               <span className="boxText">Donate</span>
