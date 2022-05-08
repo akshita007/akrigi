@@ -25,39 +25,39 @@ const Footer = () => {
 
             <ul className='list-unstyled mb-0 linkstyle'>
               <li>
-                <a href='#!' className='text-white'>
+              <Link to="/MainContent/Women" className='text-white'>
                   Women
-                </a>
+                </Link>
               </li>
               <li>
-                <a href='#!' className='text-white'>
+              <Link to="/MainContent/Men" className='text-white'>
                   Men
-                </a>
+                </Link>
               </li>
               <li>
-                <a href='#!' className='text-white'>
+              <Link to="/MainContent/Kids" className='text-white'>
                   kids
-                </a>
+                </Link>
               </li>
               <li>
-                <a href='#!' className='text-white'>
+              <Link to="/MainContent/Accessories" className='text-white'>
                   Accessories
-                </a>
+                </Link>
               </li>
               <li>
-                <a href='#!' className='text-white'>
+              <Link to="/MainContent/Bags" className='text-white'>
                   Bags
-                </a>
+                </Link>
               </li>
               <li>
-                <a href='#!' className='text-white'>
+              <Link to="/MainContent/Books" className='text-white'>
                   Books
-                </a>
+                </Link>
               </li>
               <li>
-                <a href='#!' className='text-white'>
+              <Link to="/MainContent/Shoes" className='text-white'>
                   Shoes
-                </a>
+                </Link>
               </li>
             </ul>
           </MDBCol>
