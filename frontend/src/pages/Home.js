@@ -1,8 +1,9 @@
 import React from 'react'
 import Slider from '../components/carousel'
 import { Container,Row,Col } from 'react-bootstrap'
-import Link from "react-router-dom"
+import { Link } from "react-router-dom";
 import {Button,Image} from "react-bootstrap"
+
 const Home = () => {
     return(
        <div>
@@ -12,32 +13,32 @@ const Home = () => {
                 </Row>
                 <Row className="m-2">
                    <Col className='d-flex justify-content-center'>
-                    <Link to="/MainContent" className="links"><Image src='https://us.123rf.com/450wm/repinanatoly/repinanatoly1608/repinanatoly160800032/60888930-beautiful-face-of-young-woman-with-clean-fresh-skin-close-up-on-light-grey-background-beauty-portrai.jpg?ver=6' roundedCircle  height={120} width={120} />
+                    <Link to="/MainContent/Women" className="links"><Image src='https://us.123rf.com/450wm/repinanatoly/repinanatoly1608/repinanatoly160800032/60888930-beautiful-face-of-young-woman-with-clean-fresh-skin-close-up-on-light-grey-background-beauty-portrai.jpg?ver=6' roundedCircle  height={120} width={120} />
                     <p className='d-flex justify-content-center mt-2 text-dark'>Women</p></Link>
                     </Col>
                     <Col className='d-flex justify-content-center'>
-                    <a href=''><Image src='https://cdn.shopify.com/s/files/1/0045/5104/9304/t/27/assets/AC_ECOM_SITE_2020_REFRESH_1_INDEX_M2_THUMBS-V2-1.jpg?v=8913815134086573859' roundedCircle  height={120} width={120} />
+                    <a href='/MainContent/Men'><Image src='https://cdn.shopify.com/s/files/1/0045/5104/9304/t/27/assets/AC_ECOM_SITE_2020_REFRESH_1_INDEX_M2_THUMBS-V2-1.jpg?v=8913815134086573859' roundedCircle  height={120} width={120} />
                     <p className='d-flex justify-content-center mt-2 text-dark'>Men</p></a>
                         
                     </Col>
                     <Col className='d-flex justify-content-center'>
-                    <a href=''><Image src='https://static.onecms.io/wp-content/uploads/sites/24/2019/01/GettyImages-892959344.jpg' roundedCircle  height={120} width={120} />
+                    <a href='/MainContent/Kids'><Image src='https://static.onecms.io/wp-content/uploads/sites/24/2019/01/GettyImages-892959344.jpg' roundedCircle  height={120} width={120} />
                     <p className='d-flex justify-content-center mt-2 text-dark'>Kids</p></a>
                     </Col>
                     <Col className='d-flex justify-content-center'>
-                    <a href=''><Image src=' https://www.khattemeethedesires.com/wp-content/uploads/fashion-accessories-1-e1620388327280.jpg' roundedCircle  height={120} width={120} />
+                    <a href='/MainContent/Accessories'><Image src=' https://www.khattemeethedesires.com/wp-content/uploads/fashion-accessories-1-e1620388327280.jpg' roundedCircle  height={120} width={120} />
                     <p className='d-flex justify-content-center mt-2 text-dark'>Accessories</p></a>
                     </Col>
                     <Col className='d-flex justify-content-center'>
-                    <a href=''><Image src='https://rukminim1.flixcart.com/image/714/857/hand-messenger-bag/n/b/w/1252blue-enigma-hand-held-bag-signature-no-2-original-imae3uhzsfbhaq2x.jpeg?q=50'  roundedCircle  height={120} width={120} />
+                    <a href='/MainContent/Bags'><Image src='https://rukminim1.flixcart.com/image/714/857/hand-messenger-bag/n/b/w/1252blue-enigma-hand-held-bag-signature-no-2-original-imae3uhzsfbhaq2x.jpeg?q=50'  roundedCircle  height={120} width={120} />
                     <p className='d-flex justify-content-center mt-2 text-dark'>Bags</p></a>
                     </Col>
                     <Col className='d-flex justify-content-center'>
-                        <a href=''><Image src=' https://media.istockphoto.com/photos/flying-color-books-on-pastel-yellow-background-picture-id1304915362?k=20&m=1304915362&s=170667a&w=0&h=CkAZZSAvlHh-WJno1Mj0NkwHexBT30cQGmTNO5j8M2Q=' roundedCircle  height={120} width={120} />
+                        <a href='/MainContent/Books'><Image src=' https://media.istockphoto.com/photos/flying-color-books-on-pastel-yellow-background-picture-id1304915362?k=20&m=1304915362&s=170667a&w=0&h=CkAZZSAvlHh-WJno1Mj0NkwHexBT30cQGmTNO5j8M2Q=' roundedCircle  height={120} width={120} />
                         <p className='d-flex justify-content-center mt-2 text-dark'>Books</p></a>
                     </Col>
                     <Col className='d-flex justify-content-center'>
-                        <a href=''><Image src=' https://m.media-amazon.com/images/I/71D9ImsvEtL._UY500_.jpg' roundedCircle  height={120} width={120} />
+                        <a href='/MainContent/Shoes'><Image src=' https://m.media-amazon.com/images/I/71D9ImsvEtL._UY500_.jpg' roundedCircle  height={120} width={120} />
                         <p className='d-flex justify-content-center mt-2 text-dark'>Shoes</p></a>
                     </Col>
                 </Row>
@@ -54,7 +55,7 @@ const Home = () => {
                 <Row className='mt-5'>
                     <Col sm className='d-flex  mt-3'>
                         <div style={{backgroundColor: "rgb(228,203,228)"}} className='m-.25 rounded'>
-                            <a href='' className='text-black' >
+                            <a href='/MainContent/Women' className='text-black' >
                             
                                 <div className='belowSliderInner'>
                                 <h2>Get Styled Like a Celeb</h2><br></br>
@@ -67,7 +68,7 @@ const Home = () => {
                     </Col >
                     <Col  sm  className='d-flex mt-3'>
                         <div style={{backgroundColor:"rgb(255, 197, 222)"}} className=' m-.25 rounded'>
-                            <a href='' className='text-black'>
+                            <a href='/MainContent/Women' className='text-black'>
                             
                                 <div className='belowSliderInner'>
                                 <h2>Dream Jeans</h2><br></br>
@@ -80,7 +81,7 @@ const Home = () => {
                     </Col>
                     <Col sm className='d-flex  mt-3'>
                         <div style={{backgroundColor:"rgb(255, 229, 177)"}} className='m-.25 rounded'>
-                            <a href='' className='text-black'>
+                            <a href='/MainContent/Bags' className='text-black'>
                             
                                 <div className='belowSliderInner'>
                                 <h2>New with Tags</h2><br></br>
@@ -106,16 +107,16 @@ const Home = () => {
                 </Container>
             <Row className='mt-5'>
                 <Col  className='curated'>
-                    <a href=''><div><img className='imgcontain' src='https://www.kiabza.com/media/wysiwyg/mob/new-with-tags1.png.mst.webp' /></div> </a>
+                    <a href='/MainContent/Men'><div><img className='imgcontain' alt="" src='https://www.kiabza.com/media/wysiwyg/mob/new-with-tags1.png.mst.webp' /></div> </a>
                 </Col>
                 <Col className='curated'>
-                <a href=''><div><img className='imgcontain' src='https://www.kiabza.com/media/wysiwyg/mob/new-without-tags1.png.mst.webp' /></div></a>
+                <a href='/MainContent/Men'><div><img className='imgcontain' alt="" src='https://www.kiabza.com/media/wysiwyg/mob/new-without-tags1.png.mst.webp' /></div></a>
                 </Col>
                 <Col className='curated'>
-                <a href=''><div><img className='imgcontain' src='	https://www.kiabza.com/media/wysiwyg/mob/nearly-new1.png.mst.webp' /></div></a>
+                <a href='/MainContent/Men'><div><img className='imgcontain' alt="" src='https://www.kiabza.com/media/wysiwyg/mob/nearly-new1.png.mst.webp' /></div></a>
                 </Col>
                 <Col className='curated'>
-                <a href=''><div><img className='imgcontain' src='https://www.kiabza.com/media/wysiwyg/mob/worn-a-few-times1.png.mst.webp' /></div></a>
+                <a href='/MainContent/Men'><div><img className='imgcontain' alt="" src='https://www.kiabza.com/media/wysiwyg/mob/worn-a-few-times1.png.mst.webp' /></div></a>
                 </Col>
             </Row>
         </Container>
@@ -131,28 +132,28 @@ const Home = () => {
            
                <Row className='mt-5'>
                    <Col sm className='text-center my-2 d-flex justify-content-center'>
-                       <a href=''>
+                       <a href='/MainContent/Women'>
                            <div className="circle rounded-circle text-center text-white fs-5 ">
                               Under <p className='fw-bold' style={{fontSize: "50px"}} >₹199</p>
                             </div>
                        </a>
                    </Col>
                    <Col sm className='text-center my-2 d-flex justify-content-center'>
-                       <a href=''>
+                       <a href='/MainContent/Men'>
                            <div className="circle rounded-circle text-center text-white fs-5 ">
                               Under <p className='fw-bold' style={{fontSize: "50px"}} >₹499</p>
                             </div>
                        </a>
                    </Col>
                    <Col sm className='text-center my-2 d-flex justify-content-center'>
-                       <a href=''>
+                       <a href='/MainContent/Kids'>
                            <div className="circle rounded-circle text-center text-white fs-5 ">
                               Under <p className='fw-bold' style={{fontSize: "50px"}} >₹799</p>
                             </div>
                        </a>
                    </Col>
                    <Col sm className='text-center my-2 d-flex justify-content-center' >
-                       <a href=''>
+                       <a href='/MainContent/Accessories'>
                            <div className="circle rounded-circle text-center text-white fs-5 ">
                               Under <p className='fw-bold' style={{fontSize: "50px"}} >₹999</p>
                             </div>
