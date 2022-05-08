@@ -55,7 +55,7 @@ app.use('/api/auth',authRouter);
 app.use('/api/users', usersRouter);
 app.use('/api/ngos', ngoRouter);
 app.use('/api/products', productRouter);
-app.use('/api/donate', productRouter);
+app.use('/api/donate', donateRouter);
 app.use('/api/cart', cartRouter);
 app.use('/api/order', orderRouter);
 app.use('/api/checkout', paymentRouter);

@@ -40,7 +40,7 @@ router.post("/",verify.verifyUser ,upload.array("images",6), (req,res,next)=>{
   donation.save()
     .then((product)=>{
         Donate.findOne({_id:req.user._id})
-        .populate("seller");
+        .populate("donor");
         res.status(200).json({product, msg:"Donation Product successfully created!"});
     },(err)=>next(err))
     .catch(err => next(err))
@@ -96,7 +96,7 @@ router.delete("/:id",verify.verifyUser, async (req,res)=>{
 router.get("/find/:id", async (req,res)=>{
   try{
     const product = await Donate.findById(req.params.id)
-    .populate("seller");
+    .populate("donor");
 
     res.status(200).json(product);
   }catch(err){
@@ -112,15 +112,15 @@ router.get("/", async (req,res)=>{
     let products;
 
     if(qNew){
-      products = await Product.find({}).populate("seller").sort({createdAt: -1}).limit(5);
+      products = await Product.find({}).populate("donor").sort({createdAt: -1}).limit(5);
     }else if(qCategory){
       products = await Product.find({
         categories:{
           $in:[qCategory],
         },
-      }).populate("seller");
+      }).populate("donor");
     }else {
-      products = await Product.find({}).populate("seller");
+      products = await Product.find({}).populate("donor");
     }
     res.status(200).json(products);
   }catch(err){
