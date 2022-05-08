@@ -43,7 +43,7 @@ const handleSubmitRegister = async ()=>{
                     fontFamily: "'Playfair Display', serif",
                     fontWeight:"bold",
                     fontSize:"2.5rem",
-                    color:"brown"}}>NGO Registertration</h1>
+                    color:"brown"}}>NGO Registration</h1>
                     <Row className="align-items-center">
                         
                         <InputGroup className="mb-4">
