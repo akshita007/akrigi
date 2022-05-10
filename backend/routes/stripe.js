@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
 var bodyParser = require("body-parser");
-const stripe = require("stripe")(process.env.STRIPE_KEY);
+const KEY = process.env.STRIPE_KEY
+const stripe = require("stripe")(KEY);
 
 router.use(bodyParser.json());
 
