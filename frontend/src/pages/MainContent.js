@@ -5,26 +5,28 @@ import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import { productList } from "../services/api";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
  
  const MainContent = () => {
-   const [products,setProducts]=useState([]);
+   const [list,setList]=useState([]);
+   const {category}=useParams();
 
    const fetchProducts=async()=>{
-     const data =await productList();
-     const products=data;
-     setProducts(products);
-   };
+    const data =await productList(category);
+    const products=data;
+    setList(products);
+  };
 
   useEffect(()=>{
     fetchProducts();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[]);
 
    return(
        
        <Container className="my-5">
            <Row xs={1} md={4} >
-               {products.map((item) =>(
+               {list.map((item) =>(
                     <Col className="d-flex justify-content-center mb-3">
                       <Link to={`/product/${item._id}`} style={{textDecoration:"none",color:"black"}}>
                         <Card style={{ width: '20rem',height:'500px'}} key={item.id} >
@@ -34,7 +36,7 @@ import { Link } from "react-router-dom";
                           <Card.Subtitle className="p-des mb-2">{item.desc}</Card.Subtitle>
                           <p >Rs.{item.price}</p>
                           <Button variant="primary">
-                            <Link to="/cart" style={{textDecoration:"none",color:"white"}}>Add to Cart</Link>
+                            <Link to={`/product/${item._id}`} style={{textDecoration:"none",color:"white"}}>View Product</Link>
                           </Button>
                         </Card.Body>
                         </Card>                    
