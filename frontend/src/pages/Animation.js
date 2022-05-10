@@ -64,8 +64,8 @@ export function Animation() {
             ></motion.li>
           </motion.ul>
         </div>
-        <motion.img
-          animate={{ y: [-600, -100] }}
+        <motion.img 
+          animate={{ y: [-250, -100] }}
           transition={{ duration: 3, delay: 2 }}
           src="/images/logo2.jpeg"
           style={{ width: "500px", height: "135px", marginBottom: 0 }}
@@ -89,7 +89,7 @@ export function Animation() {
           }}
         >
           <Link to= "/landingPage" className = "links">
-          <button type="button" class="btn btn-danger button">
+          <button type="button" className="btn btn-danger button">
             Let's thrift
           </button>
           </Link>
