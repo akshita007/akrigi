@@ -17,7 +17,7 @@ const SingleProd = () => {
     });
     const fetchPost = async ()=>{
         let data = await productItem(id);
-        console.log(data.seller);
+        // console.log(data.seller);
         setItem(data);
     }
 
