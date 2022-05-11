@@ -65,7 +65,7 @@ export function Animation() {
           </motion.ul>
         </div>
         <motion.img 
-          animate={{ y: [-250, -100] }}
+          animate={{ y: [-600, -100] }}
           transition={{ duration: 3, delay: 2 }}
           src="/images/logo2.jpeg"
           style={{ width: "500px", height: "135px", marginBottom: 0 }}
