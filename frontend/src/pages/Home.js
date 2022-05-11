@@ -132,28 +132,28 @@ const Home = () => {
            
                <Row className='mt-5'>
                    <Col sm className='text-center my-2 d-flex justify-content-center'>
-                       <a href='/MainContent/Women'>
+                       <a href='/MainContent/200'>
                            <div className="circle rounded-circle text-center text-white fs-5 ">
                               Under <p className='fw-bold' style={{fontSize: "50px"}} >₹199</p>
                             </div>
                        </a>
                    </Col>
                    <Col sm className='text-center my-2 d-flex justify-content-center'>
-                       <a href='/MainContent/Men'>
+                       <a href='/MainContent/500'>
                            <div className="circle rounded-circle text-center text-white fs-5 ">
                               Under <p className='fw-bold' style={{fontSize: "50px"}} >₹499</p>
                             </div>
                        </a>
                    </Col>
                    <Col sm className='text-center my-2 d-flex justify-content-center'>
-                       <a href='/MainContent/Kids'>
+                       <a href='/MainContent/800'>
                            <div className="circle rounded-circle text-center text-white fs-5 ">
                               Under <p className='fw-bold' style={{fontSize: "50px"}} >₹799</p>
                             </div>
                        </a>
                    </Col>
                    <Col sm className='text-center my-2 d-flex justify-content-center' >
-                       <a href='/MainContent/Accessories'>
+                       <a href='/MainContent/1000'>
                            <div className="circle rounded-circle text-center text-white fs-5 ">
                               Under <p className='fw-bold' style={{fontSize: "50px"}} >₹999</p>
                             </div>
