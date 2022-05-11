@@ -106,13 +106,15 @@ router.get("/find/:id", async (req,res)=>{
 
 //get all products
 router.get("/", async (req,res)=>{
-  const qNew = req.query.new;
+  const qPrice = req.query.price;
   const qCategory = req.query.category;
   try{
     let products;
 
-    if(qNew){
-      products = await Product.find({}).populate("seller").sort({createdAt: -1}).limit(5);
+    if(qPrice){
+      products = await Product.find({
+        price:{$lt:qPrice}
+      }).populate("seller").sort({createdAt: -1}).limit(5);
     }else if(qCategory){
       products = await Product.find({
         category:qCategory,
