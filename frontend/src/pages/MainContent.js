@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
-import { productList } from "../services/api";
+import { productList, productListPrice } from "../services/api";
 import { Link, useParams } from "react-router-dom";
  
  const MainContent = () => {
@@ -12,7 +12,7 @@ import { Link, useParams } from "react-router-dom";
    const {category}=useParams();
 
    const fetchProducts=async()=>{
-    const data =await productList(category);
+    const data =category>='A'?await productList(category):await productListPrice(category);
     const products=data;
     setList(products);
   };
@@ -27,8 +27,7 @@ import { Link, useParams } from "react-router-dom";
        <Container className="my-5">
            <Row xs={1} md={4} >
                {list.map((item) =>(
-                    <Col className="d-flex justify-content-center mb-3">
-                      <Link to={`/product/${item._id}`} style={{textDecoration:"none",color:"black"}}>
+                    <Col className="d-flex justify-content-center mb-3" >
                         <Card style={{ width: '20rem',height:'500px'}} key={item.id} >
                         <Card.Img variant="top" src={`/productImages/${item.images[0].filename}`} style={{height:'310px',width:'100%'}}/>
                         <Card.Body className="product-style">
@@ -40,7 +39,6 @@ import { Link, useParams } from "react-router-dom";
                           </Button>
                         </Card.Body>
                         </Card>                    
-                     </Link>
                     </Col>
                ))}
            </Row>
