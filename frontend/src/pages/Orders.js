@@ -18,7 +18,8 @@ const Info = styled.div`
 
 const OrderContainer = styled.div`
   border: 1px solid black;
-  margin-bottom:10px;
+  margin-bottom: 10px;
+  padding: 20px;
 `;
 
 const Top = styled.div`
@@ -74,24 +75,36 @@ const Price = styled.div`
   font-weight: 200;
 `;
 
+const OrderTotal = styled.div`
+  font-size: 30px;
+  font-weight: 200;
+`;
+const Bottom = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+`;
+
 const Orders=()=>{
     const [order,orderList]=useState([]);
-    const [product,setList]=useState([]);
+    const [products,setList]=useState([]);
 
     const fetchOrders=async()=>{
         const data =await getOrder();
         for(var d of data) {
         const orderdItem=d.products;
         for(var o of orderdItem){
-             await fetchProducts(o.productId);
+             const data=await fetchProducts(o.productId);
+             setList(old=>[...old,data]);
         }
     }
     orderList(data);
-      };
+};
+      console.log(...products);
       const fetchProducts=async(id)=>{
             const data =await productItem(id);
-            const products=data;
-            setList(products);
+            return data;
       };
       useEffect(()=>{
         fetchOrders();
@@ -110,7 +123,8 @@ const Orders=()=>{
                 <OrderStatus><b>Order Status:</b> {order.status}</OrderStatus>
               </Top>
               <ProductInfo>
-                <Product>
+                {products.map((product)=>(
+                <Product key={product._id}>
                   <ProductDetails>
                     <Image src={`/productImages/${product.images[0].filename}`} />
                       <Details>
@@ -128,8 +142,16 @@ const Orders=()=>{
                       <b>Rs. {product.price}</b>
                     </Price>
                   </PriceDetails>
-                </Product>
+                </Product>))}
               </ProductInfo>
+              <Bottom>
+                <OrderTotal>
+                  <b>Total Amount: </b>
+                </OrderTotal>
+                <OrderTotal>
+                  <b> Rs.{order.amount}</b>
+                </OrderTotal>
+              </Bottom> 
             </OrderContainer>
           ))}
         </Info>

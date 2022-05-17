@@ -67,8 +67,8 @@ const SingleProd = () => {
                             </div>
                             <div className="mt-4 mb-3"> <span className="text-uppercase text-muted brand">{item.category}</span>
                                 <h5 className="text-uppercase">{item.name}</h5>
-                                <div className="price d-flex flex-row align-items-center"> <span className="act-price">Rs.{item.price}</span>
-                                    <div className="ml-2"> <small className="dis-price">{item.price}</small> <span>40% OFF</span> </div>
+                                <div className="price d-flex flex-row align-items-center"> <span className="act-price">Rs.{item.price} </span>
+                                    <span>40% OFF</span>
                                 </div>
                                 <h5 className="text-uppercase mt-3">Product Description: </h5>
                                 <p className="about">{item.desc}</p>
